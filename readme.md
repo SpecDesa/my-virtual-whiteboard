@@ -70,6 +70,6 @@ The solution ended up having:
 13. Some styling has been added, but unicode characters needs to be changed, color themes can be better, gray boxes should be different. 
 
 
-<img src="./System.png"
+<img src="System.png"
      alt="Screenshot of virtual whiteboard"
      style="float: left; margin-right: 10px;" />
