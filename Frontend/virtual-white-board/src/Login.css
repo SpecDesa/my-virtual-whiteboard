@@ -1,0 +1,34 @@
+.Login {
+  text-align: center;
+
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+  /* max-width: none; */
+}
+
+.form-text {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #6c757d;
+}
+
+.Login-section{
+  margin-top: 0.4em;
+  /* margin-left: 2.8em; */
+  justify-content: center;
+}
+
+.Login-buttons{
+  width: 10em;
+  margin: 0.1em auto;
+}
+
+input{
+  text-align: center;
+}
