@@ -46,7 +46,7 @@ def get_preferred_name():
     data = request.json
     print(data)
     username = str(data['username'])
-    preferred_name = VirtualBoardDB.getPreferredName(username)
+    preferred_name = VirtualBoardDB.get_preferred_name(username)
 
     if preferred_name is not None:
         content = json.dumps({'preferredName': preferred_name})
@@ -66,7 +66,7 @@ def set_preferred_name():
     password = str(data['password'])
     preferred_name = str(data['preferredName'])
 
-    succeeded = VirtualBoardDB.setPreferredName(
+    succeeded = VirtualBoardDB.set_preferred_name(
         username, password, preferred_name)
 
     if succeeded:
@@ -90,7 +90,7 @@ def reset_password():
         new_password = new_password + \
             possible_characters[randint(0, len(possible_characters)) - 1]
 
-    if VirtualBoardDB.resetPassword(username, new_password):
+    if VirtualBoardDB.reset_password(username, new_password):
         content = json.dumps({'newPassword': new_password})
         response = make_response(content, 200, {
                                  'Content-Type': 'application/json', 'Access-Control-Allow-Credentials': 'true'})

@@ -16,7 +16,7 @@ class Database:
         else:
             return False
 
-    def printUsers(self):
+    def print_users(self):
         '''Print users in database. Primarily for debugging.'''
         for user in self.data:
             print(user)
@@ -35,7 +35,7 @@ class Database:
             print('User not found')
             return False
 
-    def makeAdmin(self, myUsername, userToBecomeAdmin):
+    def make_admin(self, myUsername, userToBecomeAdmin):
         '''Make user an admin.'''
         if self.data.get(myUsername) is not None and self.data.get(userToBecomeAdmin) is not None:
             [myPsw, myAdm] = self.data[myUsername]
@@ -46,7 +46,7 @@ class Database:
             print(
                 f'{myUsername} is not an admin or {userToBecomeAdmin} is not found in database')
 
-    def verifyAdmin(self, username):
+    def verify_admin(self, username):
         '''Verify that user is an admin.'''
         if self.data.get(username) is not None:
             x = self.data[username]
@@ -55,14 +55,14 @@ class Database:
             print(f'The user "{username}" is administator? : {adm}')
             return True
 
-    def getPreferredName(self, username):
+    def get_preferred_name(self, username):
         '''Get preferred name of user. May not want it to be the username.'''
         if self.data.get(username) is not None:
             return self.preferredName[username]
         else:
             return None
 
-    def setPreferredName(self, username, password, newPreferredName):
+    def set_preferred_name(self, username, password, newPreferredName):
         '''Set preferred name to something else than username.'''
         if self.verify(username, password):
             self.preferredName[username] = newPreferredName
@@ -70,8 +70,7 @@ class Database:
         else:
             return False
 
-            
-    def resetPassword(self, username, newPassword):
+    def reset_password(self, username, newPassword):
         '''Reset password with given password'''
         if self.data.get(username) is not None:
             [psw, admin] = self.data.get(username)
