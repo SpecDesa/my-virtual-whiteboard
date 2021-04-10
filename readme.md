@@ -68,3 +68,8 @@ The solution ended up having:
 11. Backend code for making users administrators is implemented in database-class as `make_admin`
 12. Backend code for creating users are implemented. `add`
 13. Some styling has been added, but unicode characters needs to be changed, color themes can be better, gray boxes should be different. 
+
+
+<img src="./System.png"
+     alt="Screenshot of virtual whiteboard"
+     style="float: left; margin-right: 10px;" />
